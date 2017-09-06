@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
+<meta name ="keywords" content="test,site, website"/>
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
+<meta name ="description" content="new site"/>
+<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" src="js/myjs.js"></script>
+<link rel="stylesheet" type="text/css" href="js/katex.css">
+<script src="js/katex.js" type="text/javascript"></script>
+<title>Test</title>
+</head>
+
+<body>
+
+
+
+<div id="mySidenav" class="sidenav">
+    
+  <div id="profile">
+    <div id="profile_top">
+        <img src="svg/circle.svg" style="float: left;">
+        <span style="float: left;
+        font-size: 50px;
+        color: #eee;">User Name</span>
+    </div>   
+    <div id="profile_bot_1">
+      <span
+      style="float: left;
+        font-size: 30px;
+        color: #eee;"">Total xp: 23130</span>
+    </div>
+    <div id="profile_bot_2">
+      <span
+      style="float: left;
+        font-size: 30px;
+        color: #eee;"">Место в рейтинге</span>
+    </div> 
+
+  </div>
+
+  <div class="sidenav_list">
+    <img src="svg/circle.svg" style="float: left;">
+    <a href="#1">Мой профиль</a>
+  </div>
+  <div class="sidenav_list">
+    <img src="svg/circle.svg" style="float: left;">
+    <a href="task.html">Задания</a>
+  </div>
+  <div class="sidenav_list">
+    <img src="svg/circle.svg" style="float: left;">
+    <a href="#3">Прогресс</a>
+  </div>
+  <div class="sidenav_list">
+    <img src="svg/circle.svg" style="float: left;">
+    <a href="#">Связаться</a>
+  </div>
+</div>
+<div id="content">
+<div id="lesson_tab" class="lesson_nav">
+  <div class="lesson_nav_num"> Хуй</div>
+  <div class="lesson_nav_num"> Хуй</div>
+  <div class="lesson_nav_num"> Хуй</div>
+  <div class="lesson_nav_num"> Хуй</div>
+  <div class="lesson_nav_num"> Хуй</div>    
+
+</div>
+
+
+<div id="header">
+<div id="menu" onclick="Nav()">
+  <img src="svg/menu.svg">
+</div> 
+<img src="svg/logo.svg" style="float: left;"onclick="Navigation()">
+<span style="
+font-size: 120px;
+color: #eee;
+font-family: 'Exo 2';
+float: left;
+margin-left: -20px;
+text-shadow: 5px 5px #1A2A48;
+">NewEdu.ru</span>
+</div>
+
+
+  <div id="page">
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      <div class="timer_on" onclick="timer()">
+      Вк
+      </div>   
+      <div id="num">АА СУКА</div>
+      <div id="element">
+        
+      </div>
+      <div id="timer_1">
+        <span id="timer">Блять</span>
+      </div>
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      Some text for testing this page
+      <img src="/svg/clock.svg">
+  </div>
+
+</div>
+
+</body>
+
+
+<script>
+
+function timer(){
+
+setInterval(updateClock, 1000);
+
+
+var time_sec = 0, time_minut = 0, time_hour = 0, time_sec_zero = ":0", time_minut_zero = ":0",time_hour_zero = "0",$timer = $("#timer");
+function updateClock(){
+
+  time_sec = time_sec + 1;
+  if(time_sec >= 60){
+    time_minut = time_minut +1;
+    time_sec = 0;
+  }
+  if (time_minut >= 60){
+    time_minut = 0;
+    time_hour = time_hour +1;
+  }
+  if(time_sec > 9){
+    time_sec_zero = ":";
+  }
+  if(time_minut > 9){
+    time_minut_zero =":";
+  }
+
+  $timer.text(time_hour_zero+time_hour+time_minut_zero+time_minut +time_sec_zero+time_sec);
+} 
+}
+
+var num_of_click_menu = 0;
+
+function openNav() {
+    document.getElementById("mySidenav").style.right = "0px";
+    document.getElementById("content").style.marginLeft = "-500px";
+    num_of_click_menu = num_of_click_menu + 1;
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.right = "-500px";
+    document.getElementById("content").style.marginLeft= "0";
+    num_of_click_menu = num_of_click_menu + 1;
+}
+
+function Nav(){
+  if (num_of_click_menu % 2 == 0) {
+    openNav();
+  }
+  else{
+    closeNav();
+  }
+
+}
+
+var num_of_click_navigation = 0;
+
+function openlessonNav(){
+  document.getElementById("lesson_tab").style.top = "205px";
+  document.getElementById("page").style.top = "300px";
+  num_of_click_navigation++;
+}
+
+function closelessonNav(){
+  document.getElementById("lesson_tab").style.top = "100px";
+  document.getElementById("page").style.top = "200px";
+  num_of_click_navigation++;
+}
+
+function Navigation() {
+  if (num_of_click_navigation % 2 == 0) {
+    openlessonNav();
+
+  }
+  else{
+    closelessonNav();
+  }
+
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+  window.onload = function(){
+    var res = document.getElementById("element");
+    katex.render("\\Huge x+y+z + x^2 + x_i \\sqrt{x}", res);
+  }         
+</script>
+
+</html>
